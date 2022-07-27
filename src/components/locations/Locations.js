@@ -1,8 +1,18 @@
 import { useEffect, useState } from "react"
 
 
-export const Locations = () => {
+export const Locations = ({ searchTermsState }) => {
     const [locations, setLocations] = useState([])
+
+    useEffect(
+        () => {
+            const searchedLocations = locations.filter(location => {
+                return location.city.toLowerCase().includes(searchTermsState.toLowerCase())
+            })
+            setLocations(searchedLocations)
+        },
+        [searchTermsState]
+    )
 
     useEffect(
         () => { // using localhost to get all the snow cone places from api

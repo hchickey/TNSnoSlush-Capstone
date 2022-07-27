@@ -5,6 +5,7 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./SnoSlush.css"
+import { LocationContainer } from "./locations/LocationContainer"
 
 
 export const SnoSlush = () => {
@@ -17,6 +18,7 @@ export const SnoSlush = () => {
                 <>
                     <NavBar />
                     <ApplicationViews />
+                    <LocationContainer />
                 </>
             </Authorized>
         } />
