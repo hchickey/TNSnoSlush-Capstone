@@ -14,7 +14,7 @@ export const ApplicationViews = () => {
                 </>
             }>
 
-                    
+                    <Route path="/locations" element={<Locations />} />
                     
             </Route>
         </Routes>

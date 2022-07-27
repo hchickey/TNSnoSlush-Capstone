@@ -5,10 +5,12 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./SnoSlush.css"
-import { LocationContainer } from "./locations/LocationContainer"
+import { Search } from "./search/Search"
 
 
-export const SnoSlush = () => {
+
+
+export const SnoSlush = ({locations}) => {
     return <Routes>
         <Route path="/login" element={<Login />} />
 		<Route path="/register" element={<Register />} />
@@ -18,7 +20,10 @@ export const SnoSlush = () => {
                 <>
                     <NavBar />
                     <ApplicationViews />
-                    <LocationContainer />
+                   <div> <Search location={locations} />
+                   </div>
+
+                
                 </>
             </Authorized>
         } />
