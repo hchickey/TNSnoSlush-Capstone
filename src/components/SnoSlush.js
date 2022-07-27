@@ -14,8 +14,11 @@ export const SnoSlush = () => {
 
         <Route path="*" element={
             <Authorized>
-                
+                <>
+                    <NavBar />
+                    <ApplicationViews />
+                </>
             </Authorized>
-        }
+        } />
     </Routes>
 }
