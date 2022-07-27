@@ -12,6 +12,7 @@ export const NavBar = () => {
                 <Link className="navbar__link" to="/">Home</Link>
             </li>
 
+
             {
                 localStorage.getItem("snoSlush_user")
                 // if expression is truthy
