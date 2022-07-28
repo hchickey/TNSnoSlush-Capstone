@@ -10,7 +10,7 @@ import { Search } from "./search/Search"
 
 
 
-export const SnoSlush = ({locations}) => {
+export const SnoSlush = ({ locations}) => {
     return <Routes>
         <Route path="/login" element={<Login />} />
 		<Route path="/register" element={<Register />} />
@@ -20,8 +20,9 @@ export const SnoSlush = ({locations}) => {
                 <>
                     <NavBar />
                     <ApplicationViews />
-                   <div> <Search location={locations} />
+                    <div> <Search location={locations} />
                    </div>
+                   
 
                 
                 </>
