@@ -1,4 +1,10 @@
 .nameOnCard {
+    margin-top: -300px;  
+}
+
+
+.canvaCard{
     display: flex;
-    
+    flex-direction: column;
+    align-items: center;
 }

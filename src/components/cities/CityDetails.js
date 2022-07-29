@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import { FeaturedFlavorsList } from "../flavors/FeaturedFlavorsList"
 import { FlavorList } from "../flavors/FlavorList"
 // useParams directs a user to a new Route from the current URL
 
@@ -7,7 +8,6 @@ import { FlavorList } from "../flavors/FlavorList"
 export const CityDetails = () => {
     const { locationId } = useParams()
     const [location, updateLocation] = useState({})
-    // http://localhost:8088/locations?_expand=id&_embed=featuredFlavors&locationId&_embed=locationsFlavors&locationId=
 
     useEffect(
         () => {
@@ -22,9 +22,11 @@ export const CityDetails = () => {
     )
 
     return <section className="knoxvilleCity">
-        <header className="city__header">{location?.name}</header>
+        <h1 className="city__header">{location?.name}</h1>
         <div>Address: {location?.address}</div>
-        <div>Flavors: <FlavorList
+        <div><FeaturedFlavorsList location={location} /></div>
+        <h2>{location?.name} Flavors</h2>
+        <div><FlavorList
             location={location} /> </div>
     </section>
 }
