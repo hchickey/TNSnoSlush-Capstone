@@ -1,6 +1,5 @@
 import { Outlet, Route, Routes } from "react-router-dom"
 import { CityDetails } from "../cities/CityDetails"
-import { Locations } from "../locations/Locations"
 import { Search } from "../search/Search"
 
 
@@ -15,7 +14,7 @@ export const ApplicationViews = ({locations}) => {
                     <Outlet />
                 </>
             }>
-                <Route path="/" element={<Locations />} />
+                
             </Route>
             <Route path="/:locationId" element={<CityDetails />} />
         </Routes>

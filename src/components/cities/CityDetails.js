@@ -21,9 +21,10 @@ export const CityDetails = () => {
         [locationId]
     )
 
-    return <section className="knoxvilleCity">
+    return <section className="city">
         <h1 className="city__header">{location?.name}</h1>
         <div>Address: {location?.address}</div>
+        <h2>Featured Flavors</h2>
         <div><FeaturedFlavorsList location={location} /></div>
         <h2>{location?.name} Flavors</h2>
         <div><FlavorList
