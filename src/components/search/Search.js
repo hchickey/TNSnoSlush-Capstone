@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+
 import { Scroll } from "./Scroll"
 import { SearchLocations } from "./SearchLocations"
 
@@ -15,6 +16,8 @@ export const Search = () => {
             )
         }
     )
+
+    
 
     useEffect(
         () => {
@@ -48,7 +51,7 @@ export const Search = () => {
         }
     }
 
-    return (
+    return ( 
         <section className="search">
             <div>
                 <input
@@ -60,5 +63,7 @@ export const Search = () => {
             </div>
             {searchLocations()}
         </section>
+
+
     )
 }

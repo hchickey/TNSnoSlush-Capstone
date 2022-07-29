@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Cities } from "../cities/Cities"
 
 
 export const Locations = () => {
@@ -27,20 +28,11 @@ export const Locations = () => {
         [] // When this array is empty, you are observing initial component state
     )
 
-    return <>
-    
-    <h2>Snow Cone Locations in Tennessee</h2>
-
-    <article className="locations">
+    return <article className="locations">
         {
-            locations.map(
-                (location) => {
-                    return <section className="location" key={`location--${location.id}`}>
-                        <header>{location.city}</header>
-                    </section>
-                }
-            )
+            locations.map(location => <Cities key={`location--${location.id}`}
+                id={location.id} city={location.city} />)
         }
     </article>
-    </>
+    
 }

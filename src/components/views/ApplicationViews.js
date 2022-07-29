@@ -1,6 +1,8 @@
 import { Outlet, Route, Routes } from "react-router-dom"
-import { LocationContainer } from "../locations/LocationContainer"
+import { CityDetails } from "../cities/CityDetails"
+import { FlavorList } from "../flavors/FlavorList"
 import { Locations } from "../locations/Locations"
+
 
 export const ApplicationViews = () => {
     return (
@@ -14,7 +16,9 @@ export const ApplicationViews = () => {
                 </>
             }>
 
-                    <Route path="/locations" element={<Locations />} />
+                    <Route path="/" element={<Locations />} />
+                    <Route path="/:locationId" element={ <CityDetails /> } />
+            
                     
             </Route>
         </Routes>
