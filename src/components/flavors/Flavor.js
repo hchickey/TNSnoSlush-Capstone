@@ -1,7 +1,7 @@
 
 
 
-export const Flavor = ({ flavorName }) => {
+export const Flavor = ({ flavorObject }) => {
 
     // let assignedFlavor = null
 
@@ -9,12 +9,7 @@ export const Flavor = ({ flavorName }) => {
     //     const flavorLocationRelationship = flavorObject.locationsFlavors[0]
     //     assignedFlavor = location.find(element => element.id === flavorLocationRelationship.locationId) 
     // }
-
-    return <section className="flavors">
-    <div>
-        <div>{flavorName}</div>
-    </div>
-</section>
-
-
+  return  <section className="flavors">
+        <div>{flavorObject?.flavor?.flavorName}</div>
+    </section>
 }

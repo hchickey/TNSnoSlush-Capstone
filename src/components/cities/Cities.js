@@ -6,5 +6,6 @@ export const Cities = ({ id, city }) => {
         <div>
             <Link to={`/${id}`}> {city} </Link>
         </div>
-    </section>
+        </section>
+
 }
