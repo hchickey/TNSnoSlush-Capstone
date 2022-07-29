@@ -5,27 +5,22 @@ import { NavBar } from "./nav/NavBar"
 import { Login } from "./auth/Login"
 import { Register } from "./auth/Register"
 import "./SnoSlush.css"
-import { Search } from "./search/Search"
 
 
 
 
-export const SnoSlush = ({ locations}) => {
+
+export const SnoSlush = () => {
     return <Routes>
         <Route path="/login" element={<Login />} />
-		<Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register />} />
 
         <Route path="*" element={
             <Authorized>
-                <>
-                    <NavBar />
-                    <ApplicationViews />
-                    <div> <Search location={locations} />
-                   </div>
-                   
 
-                
-                </>
+                <NavBar />
+                <ApplicationViews />
+
             </Authorized>
         } />
     </Routes>

@@ -4,17 +4,6 @@ import { Cities } from "../cities/Cities"
 
 export const Locations = () => {
     const [locations, setLocations] = useState([])
-    
-
-    // useEffect(
-    //     () => {
-    //         const searchedLocations = locations.filter(location => {
-    //             return location.city.toLowerCase().includes(searchTermsState.toLowerCase())
-    //         })
-    //         setLocations(searchedLocations)
-    //     },
-    //     [searchTermsState]
-    // )
 
     useEffect(
         () => { // using localhost to get all the snow cone places from api
@@ -29,10 +18,10 @@ export const Locations = () => {
     )
 
     return <article className="locations">
-        {
+        {/* {
             locations.map(location => <Cities key={`location--${location.id}`}
                 id={location.id} city={location.city} />)
-        }
+        } */}
     </article>
     
 }
