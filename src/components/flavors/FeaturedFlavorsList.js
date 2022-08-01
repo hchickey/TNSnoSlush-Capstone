@@ -13,7 +13,7 @@ export const FeaturedFlavorsList = ({ location }) => {
             fetch(`http://localhost:8088/featuredFlavors`)
                 .then(response => response.json())
                 .then((featuredFlavorArray) => { // this is a function so we are passing a parameter
-                    const myFeaturedFlavors = featuredFlavorArray.filter(flavor => flavor.locationId === location.id)
+                    const myFeaturedFlavors = featuredFlavorArray.filter(flavor => flavor.locationId === location?.id)
                     setFiltered(myFeaturedFlavors)
                 })
         },

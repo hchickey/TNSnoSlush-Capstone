@@ -11,7 +11,12 @@ export const NavBar = () => {
             <li className="navbar__home">
                 <Link className="navbar__link" to="/">Home</Link>
             </li>
-
+            <li className="navbar__create">
+                <Link className="navbar__link" to="/create">Create Flavor</Link>
+            </li>
+            <li className="navbar__profile">
+                <Link className="navbar__link" to="/profile">Profile</Link>
+            </li>
 
             {
                 localStorage.getItem("snoSlush_user")
