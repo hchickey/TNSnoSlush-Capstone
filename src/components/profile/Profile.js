@@ -37,7 +37,9 @@ export const Profile = () => {
             })
                 .then(res => res.json())
                 .then(() => {
-                    navigate("/profile")
+                   const removeFlavorIndex = createdFlavors.findIndex((flavor) => flavor.id === id) 
+                   const newList = createdFlavors.splice(removeFlavorIndex, 1)
+                   setCreatedFlavors(...newList)
                 })
         }} className="flavor__delete">Delete Flavor</button>
     }
@@ -59,7 +61,8 @@ export const Profile = () => {
 
         <article className="created__flavors">
             {
-                createdFlavors.map((createFlavor) => {
+                !!createdFlavors.length &&
+                createdFlavors?.map((createFlavor) => {
                     const flavorOneName = flavors.find((flavor) => flavor.id === createFlavor.flavors)
                     const flavorTwoName = flavors.find((flavor) => flavor.id === createFlavor.flavors2)
                     return <section className="created__form" key={`createdFlavors--${createFlavor.id}`}>
@@ -68,12 +71,11 @@ export const Profile = () => {
                         <div>{flavorOneName?.flavorName}</div>
                         <div>{flavorTwoName?.flavorName}</div>
                         <footer>{createFlavor.userName}</footer>
+                        {deleteCreatedFlavors(createFlavor.id)}
+
                     </section>
                 })
             }
-                <div>
-                {deleteCreatedFlavors()}
-                </div>
         </article>
     </>
 }
