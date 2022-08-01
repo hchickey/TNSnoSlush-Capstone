@@ -5,7 +5,6 @@ import { Flavor } from "./Flavor"
 
 export const FlavorList = ({ location }) => {
     // use state to iterate through all the tickets in the database
-    const [locationsFlavors, setFlavors] = useState([])
     const [filteredFlavors, setFiltered] = useState([])
 
 
@@ -14,23 +13,14 @@ export const FlavorList = ({ location }) => {
             fetch(`http://localhost:8088/locationsFlavors?_expand=flavor`)
                 .then(response => response.json())
                 .then((flavorArray) => { // this is a function so we are passing a parameter
-                    setFlavors(flavorArray) // here we are passing the argument
+                    const myFlavors = flavorArray.filter(flavor => flavor.locationId === location?.id)
+                    setFiltered(myFlavors)
 
                 })
         },
-        []
+        [location]
     )
-
-    useEffect(
-        () => {
-
-            const myFlavors = locationsFlavors.filter(flavor => flavor.locationId === location.id)
-            setFiltered(myFlavors)
-
-        },
-        [locationsFlavors]
-    )
-
+// location needs to be in the dependancy array to see the changes in useEffect
     return <article className="flavors">
         {
             filteredFlavors.map((filteredFlavor) => <Flavor key={`flavor--${filteredFlavor.id}`}
