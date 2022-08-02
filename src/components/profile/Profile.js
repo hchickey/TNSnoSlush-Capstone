@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
 import "./profile.css"
 
 
@@ -9,7 +8,6 @@ export const Profile = () => {
     const [flavors, setFlavors] = useState([])
     const localSnoSlushUser = localStorage.getItem("snoSlush_user")
     const snoSlushUserObject = JSON.parse(localSnoSlushUser)
-    const navigate = useNavigate()
 
     useEffect(
         () => {
@@ -30,18 +28,33 @@ export const Profile = () => {
         []
     )
 
-    const deleteCreatedFlavors = (id) => {
-        return <button onClick={() => {
-            fetch(`http://localhost:8088/createdFlavors/${id}`, {
-                method: "DELETE"
+    useEffect(
+        () => {
+            getCreatedFlavors()
+        },
+        []
+    )
+
+    const getCreatedFlavors = () => {
+        fetch(`http://localhost:8088/createdFlavors`)
+            .then(res => res.json())
+            .then((array) => {
+                setCreatedFlavors(array)
             })
-                .then(res => res.json())
-                .then(() => {
-                   const removeFlavorIndex = createdFlavors.findIndex((flavor) => flavor.id === id) 
-                   const newList = createdFlavors.splice(removeFlavorIndex, 1)
-                   setCreatedFlavors(...newList)
-                })
-        }} className="flavor__delete">Delete Flavor</button>
+    }
+
+
+    // fetch function needs a second parameter to call the delete method
+    const deleteCreatedFlavors = (id) => {
+        fetch(`http://localhost:8088/createdFlavors/${id}`, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            // promise handling
+            .then(() => {
+                getCreatedFlavors()
+            })
+
     }
 
     useEffect(
@@ -71,7 +84,8 @@ export const Profile = () => {
                         <div>{flavorOneName?.flavorName}</div>
                         <div>{flavorTwoName?.flavorName}</div>
                         <footer>{createFlavor.userName}</footer>
-                        {deleteCreatedFlavors(createFlavor.id)}
+                        {/* {deleteCreatedFlavors(createFlavor.id)} */}
+                        <button onClick={() => deleteCreatedFlavors(createFlavor.id)}>Delete</button>
 
                     </section>
                 })
