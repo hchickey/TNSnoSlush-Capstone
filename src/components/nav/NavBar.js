@@ -1,4 +1,5 @@
 import { Link, useNavigate } from "react-router-dom"
+import "./NavBar.css"
 
 // creating links to other pages on my website
 export const NavBar = () => {

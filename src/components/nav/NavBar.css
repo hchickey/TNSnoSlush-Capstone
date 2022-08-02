@@ -1,0 +1,28 @@
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.navbar__home {
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+.navbar__create {
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+.navbar__profile {
+    flex-basis: 20%;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.navbar__logout {
+    margin-left: auto;
+    flex-basis: 20%;
+    list-style-type: none;
+}

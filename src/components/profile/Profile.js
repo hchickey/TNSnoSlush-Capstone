@@ -84,7 +84,6 @@ export const Profile = () => {
                         <div>{flavorOneName?.flavorName}</div>
                         <div>{flavorTwoName?.flavorName}</div>
                         <footer>{createFlavor.userName}</footer>
-                        {/* {deleteCreatedFlavors(createFlavor.id)} */}
                         <button onClick={() => deleteCreatedFlavors(createFlavor.id)}>Delete</button>
 
                     </section>
