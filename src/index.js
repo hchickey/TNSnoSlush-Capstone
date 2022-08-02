@@ -10,3 +10,6 @@ root.render(
     <SnoSlush />
   </BrowserRouter>
 );
+
+// index.js is like where your query selector is but in react it is called root
+//.render is having the SnoSlush componenet render everytime something changes

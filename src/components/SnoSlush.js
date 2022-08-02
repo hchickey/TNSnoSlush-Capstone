@@ -25,3 +25,5 @@ export const SnoSlush = () => {
         } />
     </Routes>
 }
+
+// Authorized is saying you can't see NavBar or Application Views until you are logged in as a user
