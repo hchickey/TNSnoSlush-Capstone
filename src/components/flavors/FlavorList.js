@@ -4,12 +4,11 @@ import { Flavor } from "./Flavor"
 
 
 export const FlavorList = ({ location }) => {
-    // use state to iterate through all the tickets in the database
     const [filteredFlavors, setFiltered] = useState([])
 
 
     useEffect(
-        () => { // using localhost to get all the snow cone places from api
+        () => { // using localhost to get all the snow cone places flavors from api
             fetch(`http://localhost:8088/locationsFlavors?_expand=flavor`)
                 .then(response => response.json())
                 .then((flavorArray) => { // this is a function so we are passing a parameter
@@ -20,6 +19,7 @@ export const FlavorList = ({ location }) => {
         },
         [location]
     )
+// when location changes useEffect is triggered and updates the state of setFiltered
 // location needs to be in the dependancy array to see the changes in useEffect
     return <article className="flavors">
         {
@@ -28,3 +28,7 @@ export const FlavorList = ({ location }) => {
         }
     </article>
 }
+
+//flavorObject is a prop 
+//FlavorList is the parent component and Flavor is the child component
+//FlavorList passes flavorObject as a prop to give the child component acess to useState

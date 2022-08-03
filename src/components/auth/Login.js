@@ -35,7 +35,6 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    
                     <img src="/logo/SnoLogo.png" alt=""/>
                     <h2>Please sign in</h2>
                     <fieldset>

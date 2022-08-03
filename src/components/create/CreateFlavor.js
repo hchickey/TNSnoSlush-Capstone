@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import "./CreateFlavor.css"
 
 
 export const CreateFlavor = () => {
@@ -68,6 +69,7 @@ export const CreateFlavor = () => {
     // form for users to create snow cone flavors
     return (
         <form className="createFlavorForm">
+             <img className="sno_logo" src="/logo/SnoLogo.png" alt=""/>
             <h2 className="form__title">Your New Flavor</h2>
             <fieldset>
                 <div className="form-group">

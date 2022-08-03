@@ -4,7 +4,6 @@ import { FeaturedFlavor } from "../flavors/FeaturedFlavor"
 
 
 export const FeaturedFlavorsList = ({ location }) => {
-    // use state to iterate through all the tickets in the database
     const [filteredFlavor, setFiltered] = useState([])
 
 
