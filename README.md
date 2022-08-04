@@ -23,4 +23,4 @@ Snow cone places are hard to find with thier not being that many in the state of
 - Once a flavor is created, user can view all the created flavors in the profile page.
 
 Home Page:
-<img src="/Screen Shot 2022-08-04 at 2.38.37 PM" alt="">
+<img src="./Screen Shot 2022-08-04 at 2.38.37 PM.png" alt="">
