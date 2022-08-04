@@ -1,7 +1,7 @@
 .home_search{
     text-align: center;
-    height: 500px;
-    width: 1200px;
+    height: 600px;
+    width: 100%;
 }
 
 .snowconeLocations{
@@ -10,4 +10,8 @@
 
 .chillin{
     font-size: 2rem;
+}
+
+.background {
+    background-color: blue;
 }

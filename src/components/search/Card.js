@@ -4,13 +4,11 @@ import "./search.css"
 export const Card = ({location}) => {
     return (
     // link is how you click on any of the locations and it takes you to another page
-        <a className="card" href={`/${location.id}`}>
+        
         <div className="canvaCard">
-            <img className="locationCard" alt={location.city} src={location.imgPath} />
+            <a className="card" href={`/${location.id}`}><img className="locationCard" alt={location.city} src={location.imgPath} />
             <h2 className="nameOnCard">{location.city}</h2>
+            </a>
         </div>
-        <div>
-        </div>
-        </a>
     )
 }

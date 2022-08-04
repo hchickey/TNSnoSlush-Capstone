@@ -19,4 +19,13 @@ input {
     height: 50px;
 }
 
+.location{
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+}
 
+.center_results{
+    display: flex;
+    justify-content: center;
+}

@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# Tennessee Sno Slush
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tennessee Sno Slush is an application I built that allows people to search snow cone places in the state of Tennessee and create snow cone flavors of their own. The primary user of the application will be anyone that grew up going and getting snow cones with their family like I did or all the foodies out there that like to try new foods. 
 
-## Available Scripts
+When the user logs in the app, they will be prompted to search for a snowcone location. When the user finds the snow cone location that they want to learn about they can "click" on a link of the picture that will then take them to a page where they can read about the the snow cone place's address, featured flavors and regular flavors. 
 
-In the project directory, you can run:
+Users can create their own flavors and delete the flavors they've created. When the user clicks on the "submit" button they will be taken to a page where they can see all the flavors they've created. 
 
-### `npm start`
+Snow cone places are hard to find with thier not being that many in the state of Tennessee and TN Sno Slush is created for users to be able to search snow cone places near them and see what type of flavors they have at each location.  
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Relevant Links
+- [ERD](https://dbdiagram.io/d/62d46168cc1bc14cc5d4c867)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### User Story and Full CRUD Functionality
 
-### `npm test`
+- User must create an account to access the app.
+- User must sign-in and get Authorized to view the app.
+- User is able to CREATE by logging into the app navigating to the create flavor page and tapping the "submit flavor" button once the form is completed. 
+- User can READ information about snow cone locations.
+- User can DELETE created flavors by clicking the delete buttom on the flavor the user has created.
+- User can search snow cone locations as soon as they login.
+- Flavor data and location info will be grabbed via API or coded with JSON data and keywords.
+- Once a flavor is created, user can view all the created flavors in the profile page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Home Page:
+<img src="/Screen Shot 2022-08-04 at 2.38.37 PM" alt="">

@@ -4,7 +4,8 @@ import { Card } from "./Card"
 export const SearchLocations = ({ filtered }) => {
     const filterSearch = filtered?.map(location => <Card key={location.id} location={location} />)
     return (
-        <div>
+        <div className="center_results">
+        <div className="location">
             {filtered.length > 0 &&
                 // if the seachterms has any of the characters from snow cone locations show the results
                 filterSearch
@@ -14,6 +15,7 @@ export const SearchLocations = ({ filtered }) => {
                 // ! bang is a falsy condition
                 <div>No results found</div>
             }
+        </div>
         </div>
 
     )
