@@ -27,7 +27,7 @@ export const Profile = () => {
         },
         []
     )
-
+// use effect function is calling the createdFlavors for the first time and then when ever the delete function is done it calls it again
     useEffect(
         () => {
             getCreatedFlavors()
@@ -56,7 +56,7 @@ export const Profile = () => {
             })
 
     }
-
+// here after the delete method is done the .then calls the createdflavors again
     useEffect(
         () => {
             fetch(`http://localhost:8088/flavors`)
@@ -74,17 +74,15 @@ export const Profile = () => {
 
         <article className="created__flavors">
             {
-                !!createdFlavors.length &&
                 createdFlavors?.map((createFlavor) => {
                     const flavorOneName = flavors.find((flavor) => flavor.id === createFlavor.flavors)
                     const flavorTwoName = flavors.find((flavor) => flavor.id === createFlavor.flavors2)
                     return <section className="created__form" key={`createdFlavors--${createFlavor.id}`}>
-                        <header>{createFlavor.flavorName}</header>
+                        <header className="header">{createFlavor.flavorName}</header>
                         <div>{createFlavor.message}</div>
                         <div>{flavorOneName?.flavorName}</div>
                         <div>{flavorTwoName?.flavorName}</div>
                         <footer>{createFlavor.userName}</footer>
-                        {/* {deleteCreatedFlavors(createFlavor.id)} */}
                         <button onClick={() => deleteCreatedFlavors(createFlavor.id)}>Delete</button>
 
                     </section>

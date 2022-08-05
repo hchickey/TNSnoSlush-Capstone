@@ -1,18 +1,21 @@
 import React from "react"
 import { Card } from "./Card"
 
-export const SearchLocations = ({filtered}) => {
-    const filterSearch = filtered?.map( location => <Card key={location.id} location={location} />)
+export const SearchLocations = ({ filtered }) => {
+    const filterSearch = filtered?.map(location => <Card key={location.id} location={location} />)
     return (
-        <div>
+        <div className="center_results">
+        <div className="location">
             {filtered.length > 0 &&
-            // turns length number to a boolean
-            filterSearch
+                // if the seachterms has any of the characters from snow cone locations show the results
+                filterSearch
             }
-              {!filtered.length &&
-            // if length is not true say No results found
-            <div>No results found</div>
+            {!filtered.length &&
+                // if the searchterms does not have any of the characters from snow cone locations say No results found
+                // ! bang is a falsy condition
+                <div>No results found</div>
             }
+        </div>
         </div>
 
     )

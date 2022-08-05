@@ -1,0 +1,40 @@
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.navbar__home {
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+.navbar__create {
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+.navbar__profile {
+    flex-basis: 20%;
+    list-style-type: none;
+    margin-left: auto;
+}
+
+.navbar__logout {
+    margin-left: auto;
+    flex-basis: 20%;
+    list-style-type: none;
+}
+
+button{
+    background-color: #a3d465;
+    margin: 10px;
+    box-sizing: 0px 0px 25px 1px black;
+    border-radius: 8px 8px 8px 8px;
+}
+
+.navbar__link{
+    color: black;
+}
+

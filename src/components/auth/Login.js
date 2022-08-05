@@ -8,6 +8,8 @@ export const Login = () => {
     const [email, set] = useState("haley@hickey.com")
     const navigate = useNavigate()
 
+// gets user info from api to store in local storage
+// if email doesn't match api an alert window pops up
     const handleLogin = (e) => {
         e.preventDefault()
     
@@ -33,7 +35,7 @@ export const Login = () => {
         <main className="container--login">
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Tennessee Sno Slush</h1>
+                    <img src="/logo/SnoLogo.png" alt=""/>
                     <h2>Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
