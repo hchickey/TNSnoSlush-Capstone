@@ -9,12 +9,12 @@ export const NavBar = () => {
 
     return (
         <ul className="navbar">
-            <li className="navbar__home">
-               <button><Link className="navbar__link" to="/">Home</Link></button>
-            </li>
-            <li className="navbar__create">
-                <button><Link className="navbar__link" to="/create">Create Flavor</Link></button>
-            </li>
+            <div className="navbar__home">
+               <Link className="navbar__link" to="/"><img className="snoHome" src="/logo/homeSno.png" alt=""/></Link>
+            </div>
+            <div className="navbar__create">
+                <Link className="navbar__img" to="/create"><img className="snoCreate" src="/logo/createSno.png" alt=""/></Link>
+            </div>
             <li className="navbar__profile">
                 <button><Link className="navbar__link" to="/profile">Profile</Link></button>
             </li>

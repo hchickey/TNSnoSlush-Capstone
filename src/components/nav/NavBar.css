@@ -13,6 +13,7 @@
 .navbar__create {
     flex-basis: 20%;
     list-style-type: none;
+    margin-left: 100px;
 }
 
 .navbar__profile {
@@ -38,3 +39,18 @@ button{
     color: black;
 }
 
+.snoCreate {
+    height: 100px;
+    width: 100px;
+    margin-bottom: -90px;
+}
+
+.snoHome {
+    height: 100px;
+    width: 100px;
+    margin-bottom: -90px;
+}
+
+.navbar__img {
+    margin-top: -800px; 
+}
