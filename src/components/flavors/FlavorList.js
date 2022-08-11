@@ -21,7 +21,7 @@ export const FlavorList = ({ location }) => {
     )
 // when location changes useEffect is triggered and updates the state of setFiltered
 // location needs to be in the dependancy array to see the changes in useEffect
-    return <article className="flavors">
+    return <article className="flavor">
         {
             filteredFlavors.map((filteredFlavor) => <Flavor key={`flavor--${filteredFlavor.id}`}
                 flavorObject={filteredFlavor} />)

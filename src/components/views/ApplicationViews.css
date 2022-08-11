@@ -1,7 +1,7 @@
 .home_search{
-    text-align: center;
-    height: 600px;
+    height: 1000px;
     width: 100%;
+    text-align: center;
 }
 
 .snowconeLocations{
@@ -12,6 +12,3 @@
     font-size: 2rem;
 }
 
-.background {
-    background-color: blue;
-}

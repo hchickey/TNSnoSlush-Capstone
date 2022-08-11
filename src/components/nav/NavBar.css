@@ -42,15 +42,19 @@ button{
 .snoCreate {
     height: 100px;
     width: 100px;
-    margin-bottom: -90px;
 }
 
 .snoHome {
     height: 100px;
     width: 100px;
-    margin-bottom: -90px;
 }
 
-.navbar__img {
-    margin-top: -800px; 
+.snoLogout {
+    height: 100px;
+    width: 100px;
+}
+
+.snoProfile {
+    height: 100px;
+    width: 100px;
 }
