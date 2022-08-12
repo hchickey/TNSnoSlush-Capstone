@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom"
 import { FeaturedFlavorsList } from "../flavors/FeaturedFlavorsList"
 import { FlavorList } from "../flavors/FlavorList"
 import { ImgList } from "../Img/ImgList"
+import { ReviewForm } from "../reviews/ReviewForm"
+import { ReviewList } from "../reviews/ReviewList"
 import "./CityDetails.css"
 // useParams directs a user to a new Route from the current URL
 
@@ -32,5 +34,11 @@ export const CityDetails = () => {
         <div className="list__flavors"><h2 className="flavor__header">{location?.name} Flavors</h2>
         <FlavorList location={location} /></div>
         </div>
+        <div className="list__reviews">
+        <h2 className="review__header">Reviews</h2>
+        <ReviewList location={location} />
+        </div>
+        <div className="form__reviews">
+        <ReviewForm /></div>
     </section>
 }
