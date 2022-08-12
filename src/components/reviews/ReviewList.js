@@ -1,26 +1,20 @@
-import { useEffect, useState } from "react"
 import { Review } from "./Review"
 
 
-export const ReviewList = ({location}) => {
-    const [reviews, setReviews] = useState([])
+export const ReviewList = ({ getReviews, reviews}) => {
+   
 
-    useEffect(
-        () => {
-            fetch(`http://localhost:8088/reviews`)
-            .then(res => res.json())
-            .then((reviewArray) => {
-                const myReviews = reviewArray.filter(review => review.locationId === location?.id)
-                setReviews(myReviews)
-            })
-        },
-        [location]
-    )
+    return (
 
-    return <article className="reviews">
+    <article className="reviews">
         {
-            reviews.map((review) => <Review key={`review--${review.id}`}
-            reviewObject={review} />)
+            reviews?.map((review) => <Review key={`review--${review?.id}`}
+            id={review?.id}
+            review={review}
+            currentUser={review?.userId}
+            getReviews={getReviews}
+            userName={review?.user?.fullName} />)
         }
     </article>
+    ) 
 }

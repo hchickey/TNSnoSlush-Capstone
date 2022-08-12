@@ -1,26 +1,35 @@
-import { useState } from "react"
-import { useNavigate } from "react-router-dom"
+import {  useState } from "react"
+import {  useParams } from "react-router-dom"
 
 
-export const ReviewForm = () => {
-    const [reviews, setReviews] = useState([])
+
+export const ReviewForm = ({getReviews}) => {
+    let { locationId } = useParams();
     const [review, update] = useState({
-        userId: 0,
-        locationId: 0,
+        userId: "",
+        locationId: "",
         message: ""
     })
 
-    const navigate = useNavigate()
+    
     const localSnoSlushUser = localStorage.getItem("snoSlush_user")
     const snoSlushUserObject = JSON.parse(localSnoSlushUser)
 
+
+
+
     const saveButtonClick = (event) => {
-        event.preventDefault()
+        event.preventDefault();
 
         const formToSendToAPI = {
             userId: snoSlushUserObject.id,
             message: review.message,
-            locationId: review.locationId
+            locationId: locationId && parseInt(locationId)
+        }
+
+        const accessToSendToAPI = {
+            locationId: review.locationId,
+            reviewId: 0,
         }
 
         return fetch(`http://localhost:8088/reviews`, {
@@ -32,10 +41,19 @@ export const ReviewForm = () => {
         })
             .then(res => res.json())
             .then(
-                () => {
-                    navigate("/:locationId")
+                (newReview) => {
+                    accessToSendToAPI.reviewId = newReview.id
                 }
             )
+            .then(
+                update({
+                    message: "",
+                    userId: "",
+                    locationId: ""
+                })
+            )
+            .then(getReviews)
+            
     }
 
     return (

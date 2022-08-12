@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { ReviewForm } from "./ReviewForm"
 import { ReviewList } from "./ReviewList"
@@ -16,9 +16,13 @@ export const ReviewContainer = () => {
             })
     }
 
+    useEffect(()=>{
+        getReviews()
+    },[])
+
     return <>
-        <ReviewForm getReviews={getReviews} />
-        <ReviewList reviews={reviews} getReviews={getReviews} />
+        <ReviewList reviews={reviews} getReviews={getReviews} setReviews={setReviews} />
+        <div className="form__reviews"><ReviewForm getReviews={getReviews} /></div>
     </>
 
 
