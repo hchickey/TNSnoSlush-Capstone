@@ -9,25 +9,25 @@ export const NavBar = () => {
 
     return (
         <ul className="navbar">
-            <li className="navbar__home">
-               <button><Link className="navbar__link" to="/">Home</Link></button>
-            </li>
-            <li className="navbar__create">
-                <button><Link className="navbar__link" to="/create">Create Flavor</Link></button>
-            </li>
-            <li className="navbar__profile">
-                <button><Link className="navbar__link" to="/profile">Profile</Link></button>
-            </li>
+            <div className="navbar__home">
+               <Link className="navbar__link" to="/"><img className="snoHome" src="/logo/homeSno.png" alt=""/></Link>
+            </div>
+            <div className="navbar__create">
+                <Link className="navbar__img" to="/create"><img className="snoCreate" src="/logo/createSno.png" alt=""/></Link>
+            </div>
+            <div className="navbar__profile">
+                <Link className="navbar__link" to="/profile"><img className="snoProfile" src="/logo/profileSno.png" alt="" /></Link>
+            </div>
 
             {
                 localStorage.getItem("snoSlush_user")
                 // if expression is truthy
-            ? <li className="navbar__logout">
-                <button><Link className="navbar__link" to="" onClick={() => {
+            ? <div className="navbar__logout">
+                <Link className="navbar__link" to="" onClick={() => {
                     localStorage.removeItem("snoSlush_user")
                     navigate("/", {replace: true})
-                }}>Logout</Link></button>
-            </li>
+                }}><img className="snoLogout" src="/logo/logoutSno.png" alt="" /></Link>
+            </div>
             : ""
             }
         </ul>

@@ -10,7 +10,7 @@ export const ApplicationViews = () => {
     return (
         <Routes>
             <Route className="background" path="/" element={
-                <>  <div className="home_search" style={{ backgroundImage: "url(/logo/SnoRainbow.png)"}}>
+                <>  <div className="home_search" style={{ backgroundImage: "url(/logo/rainbowSno.png)"}}>
                     <h1 className="snowconeLocations">Snow Cone Locations</h1>
                     <div className="chillin">Grab your chillin' buddie for a chillin' treat!</div>
                     <div><Search /></div>

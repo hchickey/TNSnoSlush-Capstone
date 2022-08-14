@@ -13,7 +13,7 @@ export const SearchLocations = ({ filtered }) => {
             {!filtered.length &&
                 // if the searchterms does not have any of the characters from snow cone locations say No results found
                 // ! bang is a falsy condition
-                <div>No results found</div>
+                <div className="results">No results found</div>
             }
         </div>
         </div>
