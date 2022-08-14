@@ -7,22 +7,6 @@
     background-color: #a3d465;
 }
 
-.featured {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: stretch;
-    width: 35%;
-    padding: 1rem;
-}
-
-.featured__header {
-    font-size: 2rem;
-    padding: 1rem;
-    margin-bottom: -1rem;
-    float: right;
-}
-
 .address {
     margin-bottom: 1rem;
     margin-top: -2rem;
@@ -38,6 +22,12 @@
     padding: 1rem;
 }
 
+.single_feature{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+}
+
 .flavor{
     width: 100%;
     display: flex;
@@ -46,6 +36,11 @@
 }
 
 .flavor__header {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.featured__header{
     padding: 1rem;
     font-size: 2rem;
 }
@@ -71,10 +66,6 @@
     padding: 1rem;
 }
 
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .form__reviews {
     padding: 1rem;
