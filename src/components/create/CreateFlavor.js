@@ -66,6 +66,8 @@ export const CreateFlavor = () => {
         }
 
     }
+
+
     // form for users to create snow cone flavors
     return (
         <form className="createFlavorForm">
@@ -83,7 +85,15 @@ export const CreateFlavor = () => {
                             }
                         }>
                         <option value={0}>Select flavor...</option>
-                        {flavors.map(
+                        {flavors.sort((a, b) => {
+                            if (a.flavorName > b.flavorName) {
+                                return 1;
+                            }
+                            if (a.flavorName < b.flavorName) {
+                                return -1;
+                            }
+                            return 0;
+                        }).map(
                             (flavor) => {
                                 return (
                                     <option key={flavor.id} className="flavor__type" name="flavor__type" value={flavor.id}>
